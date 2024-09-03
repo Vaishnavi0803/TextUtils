@@ -17,7 +17,7 @@ function App() {
 
     setTimeout(() => {
       setAlert(null);
-    }, 2000);  // Clear alert after 2 seconds
+    }, 2000);  
   };
 
   return (
@@ -29,7 +29,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Textform />} />
             <Route exact path="/about" element={<AboutUs />} />
-            <Route path="*" element={<Textform />} /> {/* Fallback Route */}
+            <Route path="*" element={<Textform />} /> 
           </Routes>
         </div>
       </Router>
