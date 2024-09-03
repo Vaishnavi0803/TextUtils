@@ -99,29 +99,29 @@ export default function Textform() {
           />
         </div>
         <br />
-        <div style={{ display: 'flex', gap: '10px' }}>
-          <button id="btn-uppercase" className="btn btn-primary" onClick={func1}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+          <button id="btn-uppercase" disabled={text.length===0}className="btn btn-primary" onClick={func1}>
             Convert to Uppercase
           </button>
-          <button id="btn-lowercase" className="btn btn-primary" onClick={func3}>
+          <button id="btn-lowercase" disabled={text.length===0}className="btn btn-primary" onClick={func3}>
             Convert to Lowercase
           </button>
-          <button id="btn-reverse" className="btn btn-primary" onClick={func5}>
+          <button id="btn-reverse" disabled={text.length===0}className="btn btn-primary" onClick={func5}>
             Reverse Text
           </button>
-          <button id="btn-wordcount" className="btn btn-primary" onClick={func6}>
+          <button id="btn-wordcount" disabled={text.length===0}className="btn btn-primary" onClick={func6}>
             Capitalize First Letter of Each Word
           </button>
-          <button id="btn-clear" className="btn btn-primary" onClick={func4}>
+          <button id="btn-clear" disabled={text.length===0}className="btn btn-primary" onClick={func4}>
             Clear
           </button>
-          <button id="btn-speak" className="btn btn-primary" onClick={speak}>
+          <button id="btn-speak" disabled={text.length===0}className="btn btn-primary" onClick={speak}>
             Speak
           </button>
-          <button id="btn-remove-spaces" className="btn btn-primary" onClick={func7}>
+          <button id="btn-remove-spaces" disabled={text.length===0}className="btn btn-primary" onClick={func7}>
             Remove Spaces
           </button>
-          <button id="btn-find-replace" className="btn btn-primary" onClick={fReplace}>
+          <button id="btn-find-replace" disabled={text.length===0}className="btn btn-primary" onClick={fReplace}>
             Find and Replace
           </button>
         </div>
