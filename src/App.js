@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Textform from './components/Textform';
+import Navbar from './components/Navbar';
+import Alert from './components/Alert';
+import AboutUs from './components/AboutUs';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
+  const [alert, setAlert] = useState(null);
+
+  const showAlert = (message, type) => {
+    setAlert({
+      message: message,
+      type: type
+    });
+
+    setTimeout(() => {
+      setAlert(null);
+    }, 2000);  // Clear alert after 2 seconds
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar title="TextUtils" aboutus="About" showAlert={showAlert} />
+        <Alert alert={alert} />
+        <Routes>
+          <Route exact path="/about" element={<AboutUs />}></Route>
+          <Route exact path="/" element={<Textform />} ></Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
 export default App;
+
