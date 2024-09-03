@@ -4,12 +4,7 @@ import Textform from './components/Textform';
 import Navbar from './components/Navbar';
 import Alert from './components/Alert';
 import AboutUs from './components/AboutUs';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -31,10 +26,11 @@ function App() {
         <Navbar title="TextUtils" aboutus="About" showAlert={showAlert} />
         <Alert alert={alert} />
         <div className="container my-3">
-        <Routes>
-          <Route exact path="/" element={<Textform />} ></Route>
-          <Route exact path="/about" element={<AboutUs />}></Route>
-        </Routes>
+          <Routes>
+            <Route exact path="/" element={<Textform />} />
+            <Route exact path="/about" element={<AboutUs />} />
+            <Route path="*" element={<Textform />} /> {/* Fallback Route */}
+          </Routes>
         </div>
       </Router>
     </>
@@ -42,4 +38,3 @@ function App() {
 }
 
 export default App;
-
