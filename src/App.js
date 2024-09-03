@@ -30,10 +30,12 @@ function App() {
       <Router>
         <Navbar title="TextUtils" aboutus="About" showAlert={showAlert} />
         <Alert alert={alert} />
+        <div className="container my-3">
         <Routes>
           <Route exact path="/" element={<Textform />} ></Route>
           <Route exact path="/about" element={<AboutUs />}></Route>
         </Routes>
+        </div>
       </Router>
     </>
   );
