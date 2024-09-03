@@ -41,8 +41,6 @@ export default function Navbar(props) {
               <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={togglefunc} />
               <label className="form-check-label ms-2" htmlFor="flexSwitchCheckDefault">Enable Dark mode</label>
             </div>
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-primary me-2" type="submit">Search</button>
           </form>
         </div>
       </div>
