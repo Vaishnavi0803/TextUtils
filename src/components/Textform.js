@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function Textform() {
-  const [text, setText] = useState('Enter your text');
+  const [text, setText] = useState('');
   const [fword, setFword] = useState('');
   const [rword, setRWord] = useState('');
 
@@ -128,7 +128,7 @@ export default function Textform() {
       </div>
       <div className="container">
         <h2>Your summary</h2>
-        <p>Word count={text.split(" ").filter((element)=>{return element.length!==0}).length}</p>
+        <p>Word count={text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</p>
         <p>Character count={text.length}</p>
         <h2>Preview</h2>
         <p>{text}</p>

@@ -31,8 +31,8 @@ function App() {
         <Navbar title="TextUtils" aboutus="About" showAlert={showAlert} />
         <Alert alert={alert} />
         <Routes>
-          <Route exact path="/about" element={<AboutUs />}></Route>
           <Route exact path="/" element={<Textform />} ></Route>
+          <Route exact path="/about" element={<AboutUs />}></Route>
         </Routes>
       </Router>
     </>

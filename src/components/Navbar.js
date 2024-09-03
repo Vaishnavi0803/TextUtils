@@ -22,7 +22,7 @@ export default function Navbar(props) {
     <div>
       <nav className={`navbar navbar-expand-lg ${dm ? 'navbar-dark bg-dark text-white' : 'navbar-light bg-light text-black'}`}>
         <div className="container-fluid">
-          <Link className="nav-link active" aria-current="page" to="/" onClick={() => window.location.reload()}>{props.title}</Link>
+          <Link className="nav-link active" style={{fontFamily: 'fantasy',fontSize: '32px'}} to="/" onClick={() => window.location.reload()}>{props.title}</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
